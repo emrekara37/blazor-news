@@ -65,6 +65,7 @@ namespace BlazorApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub();
+                endpoints.MapFallbackToAreaPage(pattern:"Admin",page:"/_AdminHost",area:"Admin");
                 endpoints.MapFallbackToPage("/_Host");
             });
         }

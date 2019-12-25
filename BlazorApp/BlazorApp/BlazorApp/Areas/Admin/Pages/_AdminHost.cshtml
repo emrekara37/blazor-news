@@ -1,0 +1,43 @@
+﻿@page "/Admin/"
+@namespace BlazorApp.Areas.Admin.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BlazorApp</title>
+    <base href="~/"/>
+    <link href="/admintheme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="/admintheme/css/sb-admin-2.min.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="/css/site.css" rel="stylesheet" asp-append-version="true"/>
+</head>
+<body id="page-top">
+<app>
+    <component type="typeof(AdminApp)" render-mode="ServerPrerendered"/>
+</app>
+
+<div id="blazor-error-ui">
+    <environment include="Staging,Production">
+        An error has occurred. This application may no longer respond until reloaded.
+    </environment>
+    <environment include="Development">
+        An unhandled exception has occurred. See browser dev tools for details.
+    </environment>
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+<script src="/_framework/blazor.server.js"></script>
+<script src="/theme/js/jquery.js"></script>
+<script src="/theme/js/popper.min.js"></script>
+<script src="/theme/js/bootstrap.min.js"></script>
+
+</body>
+</html>
