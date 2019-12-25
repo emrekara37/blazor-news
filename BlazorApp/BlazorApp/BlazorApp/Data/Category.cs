@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BlazorApp.Data
 {
@@ -9,5 +10,6 @@ namespace BlazorApp.Data
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
         public int? ParentId { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
     }
 }
